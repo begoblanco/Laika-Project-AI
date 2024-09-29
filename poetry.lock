@@ -2,13 +2,13 @@
 
 [[package]]
 name = "anyio"
-version = "4.4.0"
+version = "4.6.0"
 description = "High level compatibility layer for multiple asynchronous event loop implementations"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 files = [
-    {file = "anyio-4.4.0-py3-none-any.whl", hash = "sha256:c1b2d8f46a8a812513012e1107cb0e68c17159a7a594208005a57dc776e1bdc7"},
-    {file = "anyio-4.4.0.tar.gz", hash = "sha256:5aadc6a1bbb7cdb0bede386cac5e2940f5e2ff3aa20277e991cf028e0585ce94"},
+    {file = "anyio-4.6.0-py3-none-any.whl", hash = "sha256:c7d2e9d63e31599eeb636c8c5c03a7e108d73b345f064f1c19fdc87b79036a9a"},
+    {file = "anyio-4.6.0.tar.gz", hash = "sha256:137b4559cbb034c477165047febb6ff83f390fc3b20bf181c1fc0a728cb8beeb"},
 ]
 
 [package.dependencies]
@@ -16,9 +16,9 @@ idna = ">=2.8"
 sniffio = ">=1.1"
 
 [package.extras]
-doc = ["Sphinx (>=7)", "packaging", "sphinx-autodoc-typehints (>=1.2.0)", "sphinx-rtd-theme"]
-test = ["anyio[trio]", "coverage[toml] (>=7)", "exceptiongroup (>=1.2.0)", "hypothesis (>=4.0)", "psutil (>=5.9)", "pytest (>=7.0)", "pytest-mock (>=3.6.1)", "trustme", "uvloop (>=0.17)"]
-trio = ["trio (>=0.23)"]
+doc = ["Sphinx (>=7.4,<8.0)", "packaging", "sphinx-autodoc-typehints (>=1.2.0)", "sphinx-rtd-theme"]
+test = ["anyio[trio]", "coverage[toml] (>=7)", "exceptiongroup (>=1.2.0)", "hypothesis (>=4.0)", "psutil (>=5.9)", "pytest (>=7.0)", "pytest-mock (>=3.6.1)", "trustme", "uvloop (>=0.21.0b1)"]
+trio = ["trio (>=0.26.1)"]
 
 [[package]]
 name = "blinker"
@@ -148,14 +148,17 @@ zstd = ["zstandard (>=0.18.0)"]
 
 [[package]]
 name = "idna"
-version = "3.8"
+version = "3.10"
 description = "Internationalized Domain Names in Applications (IDNA)"
 optional = false
 python-versions = ">=3.6"
 files = [
-    {file = "idna-3.8-py3-none-any.whl", hash = "sha256:050b4e5baadcd44d760cedbd2b8e639f2ff89bbc7a5730fcc662954303377aac"},
-    {file = "idna-3.8.tar.gz", hash = "sha256:d838c2c0ed6fced7693d5e8ab8e734d5f8fda53a039c0164afb0b82e771e3603"},
+    {file = "idna-3.10-py3-none-any.whl", hash = "sha256:946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3"},
+    {file = "idna-3.10.tar.gz", hash = "sha256:12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9"},
 ]
+
+[package.extras]
+all = ["flake8 (>=7.1.1)", "mypy (>=1.11.2)", "pytest (>=8.3.2)", "ruff (>=0.6.2)"]
 
 [[package]]
 name = "itsdangerous"
@@ -255,6 +258,47 @@ files = [
 ]
 
 [[package]]
+name = "mysql-connector-python"
+version = "9.0.0"
+description = "MySQL driver written in Python"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "mysql-connector-python-9.0.0.tar.gz", hash = "sha256:8a404db37864acca43fd76222d1fbc7ff8d17d4ce02d803289c2141c2693ce9e"},
+    {file = "mysql_connector_python-9.0.0-cp310-cp310-macosx_13_0_arm64.whl", hash = "sha256:72bfd0213364c2bea0244f6432ababb2f204cff43f4f886c65dca2be11f536ee"},
+    {file = "mysql_connector_python-9.0.0-cp310-cp310-macosx_13_0_x86_64.whl", hash = "sha256:052058cf3dc0bf183ab522132f3b18a614a26f3e392ae886efcdab38d4f4fc42"},
+    {file = "mysql_connector_python-9.0.0-cp310-cp310-manylinux_2_17_aarch64.whl", hash = "sha256:f41cb8da8bb487ed60329ac31789c50621f0e6d2c26abc7d4ae2383838fb1b93"},
+    {file = "mysql_connector_python-9.0.0-cp310-cp310-manylinux_2_17_x86_64.whl", hash = "sha256:67fc2b2e67a63963c633fc884f285a8de5a626967a3cc5f5d48ac3e8d15b122d"},
+    {file = "mysql_connector_python-9.0.0-cp310-cp310-win_amd64.whl", hash = "sha256:933c3e39d30cc6f9ff636d27d18aa3f1341b23d803ade4b57a76f91c26d14066"},
+    {file = "mysql_connector_python-9.0.0-cp311-cp311-macosx_13_0_arm64.whl", hash = "sha256:7af7f68198f2aca3a520e1201fe2b329331e0ca19a481f3b3451cb0746f56c01"},
+    {file = "mysql_connector_python-9.0.0-cp311-cp311-macosx_13_0_x86_64.whl", hash = "sha256:38c229d76cd1dea8465357855f2b2842b7a9b201f17dea13b0eab7d3b9d6ad74"},
+    {file = "mysql_connector_python-9.0.0-cp311-cp311-manylinux_2_17_aarch64.whl", hash = "sha256:c01aad36f0c34ca3f642018be37fd0d55c546f088837cba88f1a1aff408c63dd"},
+    {file = "mysql_connector_python-9.0.0-cp311-cp311-manylinux_2_17_x86_64.whl", hash = "sha256:853c5916d188ef2c357a474e15ac81cafae6085e599ceb9b2b0bcb9104118e63"},
+    {file = "mysql_connector_python-9.0.0-cp311-cp311-win_amd64.whl", hash = "sha256:134b71e439e2eafaee4c550365221ae2890dd54fb76227c64a87a94a07fe79b4"},
+    {file = "mysql_connector_python-9.0.0-cp312-cp312-macosx_13_0_arm64.whl", hash = "sha256:9199d6ecc81576602990178f0c2fb71737c53a598c8a2f51e1097a53fcfaee40"},
+    {file = "mysql_connector_python-9.0.0-cp312-cp312-macosx_13_0_x86_64.whl", hash = "sha256:b267a6c000b7f98e6436a9acefa5582a9662e503b0632a2562e3093a677f6845"},
+    {file = "mysql_connector_python-9.0.0-cp312-cp312-manylinux_2_17_aarch64.whl", hash = "sha256:ac92b2f2a9307ac0c4aafdfcf7ecf01ec92dfebd9140f8c95353adfbf5822cd4"},
+    {file = "mysql_connector_python-9.0.0-cp312-cp312-manylinux_2_17_x86_64.whl", hash = "sha256:ced1fa55e653d28f66c4f3569ed524d4d92098119dcd80c2fa026872a30eba55"},
+    {file = "mysql_connector_python-9.0.0-cp312-cp312-win_amd64.whl", hash = "sha256:ca8349fe56ce39498d9b5ca8eabba744774e94d85775259f26a43a03e8825429"},
+    {file = "mysql_connector_python-9.0.0-cp38-cp38-macosx_13_0_x86_64.whl", hash = "sha256:a48534b881c176557ddc78527c8c75b4c9402511e972670ad33c5e49d31eddfe"},
+    {file = "mysql_connector_python-9.0.0-cp38-cp38-manylinux_2_17_aarch64.whl", hash = "sha256:e90a7b96ce2c6a60f6e2609b0c83f45bd55e144cc7c2a9714e344938827da363"},
+    {file = "mysql_connector_python-9.0.0-cp38-cp38-manylinux_2_17_x86_64.whl", hash = "sha256:2a8f451c4d700802fdfe515890c14974766c322213df2ceed3b27752929dc70f"},
+    {file = "mysql_connector_python-9.0.0-cp38-cp38-win_amd64.whl", hash = "sha256:2dcf05355315e5c7c81e9eca34395d78f29c4da3662e869e42dd7b16380f92ce"},
+    {file = "mysql_connector_python-9.0.0-cp39-cp39-macosx_13_0_arm64.whl", hash = "sha256:823190e7f2a9b4bcc574ab6bb72a33802933e1a8c171594faad90162d2d27758"},
+    {file = "mysql_connector_python-9.0.0-cp39-cp39-macosx_13_0_x86_64.whl", hash = "sha256:b8639d8aa381a7d19b92ca1a32448f09baaf80787e50187d1f7d072191430768"},
+    {file = "mysql_connector_python-9.0.0-cp39-cp39-manylinux_2_17_aarch64.whl", hash = "sha256:a688ea65b2ea771b9b69dc409377240a7cab7c1aafef46cd75219d5a94ba49e0"},
+    {file = "mysql_connector_python-9.0.0-cp39-cp39-manylinux_2_17_x86_64.whl", hash = "sha256:6d92c58f71c691f86ad35bb2f3e13d7a9cc1c84ce0b04c146e5980e450faeff1"},
+    {file = "mysql_connector_python-9.0.0-cp39-cp39-win_amd64.whl", hash = "sha256:eacc353dcf6f39665d4ca3311ded5ddae0f5a117f03107991d4185ffa59fd890"},
+    {file = "mysql_connector_python-9.0.0-py2.py3-none-any.whl", hash = "sha256:016d81bb1499dee8b77c82464244e98f10d3671ceefb4023adc559267d1fad50"},
+]
+
+[package.extras]
+dns-srv = ["dnspython (==2.6.1)"]
+fido2 = ["fido2 (==1.1.2)"]
+gssapi = ["gssapi (>=1.6.9,<=1.8.2)"]
+telemetry = ["opentelemetry-api (==1.18.0)", "opentelemetry-exporter-otlp-proto-http (==1.18.0)", "opentelemetry-sdk (==1.18.0)"]
+
+[[package]]
 name = "ollama"
 version = "0.3.3"
 description = "The official Python client for Ollama."
@@ -267,6 +311,20 @@ files = [
 
 [package.dependencies]
 httpx = ">=0.27.0,<0.28.0"
+
+[[package]]
+name = "python-dotenv"
+version = "1.0.1"
+description = "Read key-value pairs from a .env file and set them as environment variables"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "python-dotenv-1.0.1.tar.gz", hash = "sha256:e324ee90a023d808f1959c46bcbc04446a10ced277783dc6ee09987c37ec10ca"},
+    {file = "python_dotenv-1.0.1-py3-none-any.whl", hash = "sha256:f7b63ef50f1b690dddf550d03497b66d609393b40b564ed0d674909a68ebf16a"},
+]
+
+[package.extras]
+cli = ["click (>=5.0)"]
 
 [[package]]
 name = "sniffio"
@@ -299,4 +357,4 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "8c1ffde996cdac493fde07dec2219935f9bfc989b83751629ce60a92a7a6d264"
+content-hash = "9224dacdf436aa446921776e802be738a5f66677b2160163020c2c5ca9841a52"

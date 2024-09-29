@@ -88,9 +88,10 @@ def process_query(model: str, user_input: str):
     messages = [
         {
             "role": "system",
-            "content": """You are a virtual assitant which has a series of tools defined, if you are not sure what tool to use respond normally without mentioning tool usage.
+            "content": """Your name is Laika. You are a virtual assitant which has a series of tools defined, if you are not sure what tool to use respond normally without mentioning tool usage.
+            Yo only have the following tools: ['tool_get_notes', 'tool_get_upcoming_events'], for the rest of the queries answer normally.
             You will receive messages from the user with the following json format:
-            {"user_id": int, "current_date": string, "message": string}
+            {"user_id": int, "user_name": string, "current_date": string, "message": string}
             You must always respond adding a matching emotion, you can choose between the following emotions: ['angry', 'confused', 'happy', 'neutral', 'sad', 'very_happy', 'laughing].
             Please respond in json with the following format:
             {"emotion": "happy", "message": "your response"}
@@ -257,7 +258,6 @@ def chat():
         )
     except Exception as e:
         print(e)
-        print(query_response)
         parsed_response = json.dumps(
             {
                 "emotion": "happy",
@@ -267,6 +267,7 @@ def chat():
             }
         )
 
+    print(parsed_response)
     response = app.response_class(
         response=parsed_response,
         status=200,
