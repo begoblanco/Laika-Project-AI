@@ -27,6 +27,12 @@ ollama pull mistral-nemo
 flask --app laika run --port 15000
 ```
 
+## Links
+[Back-end Java Laika](https://github.com/begoblanco/Laika-Project-Back)
+
+[Front-end Laika](https://github.com/begoblanco/Laika-Project-Front)
+
+
 ## Credits
 This is a non-profitable project!
 
