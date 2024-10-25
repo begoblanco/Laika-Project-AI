@@ -10,7 +10,7 @@ package-mode = false
 python = "^3.12"
 flask = "^3.0.3"
 ollama = "^0.3.3"
-mysql-connector-python = "^9.0.0"
+mysql-connector-python = "^9.1.0"
 python-dotenv = "^1.0.1"
 
 
